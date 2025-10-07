@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luzia Joyas</title>
+    <link rel="stylesheet" href="css/estetica.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,49 +20,72 @@
                 <h1>Luzia Joyas</h1>
             </div>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="inicio">
         <section class="hero">
-            <h2>Donde la luz se vuelve joya</h2>
+            <h2>LUZIA - Donde la luz se vuelve joya</h2>
             <p>Descubrí joyas únicas, para mujeres únicas.</p>
             <a href="catalogo.html">Ver Colección</a>
         </section>
 
-
         <section class="colecciones">
             <h2>Nuestras Colecciones</h2>
-            <div>
-                <h3>Anillos</h3>
-                <p>Desde anillos de compromiso hasta anillos para todos los días.</p>
+            <div class="grid-colecciones">
+                <div>
+                    <img src="./images/anillo.jpg" alt="Anillos de Luzia Joyas">
+                    <h3>Anillos</h3>
+                    <p>Desde anillos extravagantes hasta anillos para todos los días.</p>
+                </div>
+                <div>
+                    <img src="./images/collar.jpg" alt="Collares de Luzia Joyas">
+                    <h3>Collares</h3>
+                    <p>Collares para complementar cualquier ocasión especial.</p>
+                </div>
+                <div>
+                    <img src="./images/aro.jpg" alt="Aros de Luzia Joyas">
+                    <h3>Aros</h3>
+                    <p>Modelos clásicos o modernos, pensados para acompañarte siempre.</p>
+                </div>
+                <div>
+                    <img src="./images/pulsera.jpg" alt="Pulseras de Luzia Joyas">
+                    <h3>Pulseras</h3>
+                    <p>Para agregar ese toque que te pertenece a tu look.</p>
+                </div>
             </div>
-            <div>
-                <h3>Collares</h3>
-                <p>Collares para complementar cualquier ocasión especial.</p>
-            </div>
-            <div>
-                <h3>Aros</h3>
-                <p>Modelos clásicos o modernos, pensados para acompañarte siempre.</p>
-            </div>
-            <div>
-                <h3>Pulseras</h3>
-                <p>Para agregar ese toque a tu look.</p>
+        </section>
+
+        <section class="conocenos-seccion">
+            <h2>Conocenos</h2>
+            <div class="conocenos">
+                <p>Soy Martina, fundadora de Luzia. Creo en las joyas que se sienten propias, esas que acompañan tu día
+                    y te hacen brillar sin esfuerzo. Desde chica me apasionaron los detalles y el poder que tienen las
+                    piezas únicas para expresar quiénes somos.
+
+                    En Luzia busco crear diseños que reflejen esa mezcla entre delicadeza, luz y personalidad. Cada joya
+                    está pensada para realzar lo que ya te hace especial: tu estilo, tu historia, tu forma de mirar el
+                    mundo.
+
+                    Trabajo con materiales de calidad y cuido cada paso del proceso, porque creo que el verdadero lujo
+                    está en lo hecho con dedicación y amor.</p>
+
+                <img src="./images/conocernos.jpg" alt="Conocenos">
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="contacto">
         <div class="footer-seccion">
             <h3>Contacto</h3>
             <p>Email: atencion.cliente@luziaJoyas.com</p>
-            <p>Tel: +54 11 2233-4455</p>
+            <p>Teléfono: +54 11 2233-4455</p>
             <p>Instagram: @luziajoyas</p>
-        </div>
         </div>
     </footer>
 </body>
