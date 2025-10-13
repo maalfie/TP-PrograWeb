@@ -147,6 +147,15 @@ function eliminarDelCarrito(idProducto) {
   mostrarToast('✓ Producto eliminado del carrito');
 }
 
+// Función para actualizar el contador del carrito
+function actualizarContadorCarrito() {
+  const contadorElement = document.getElementById('contador-carrito');
+  if (contadorElement) {
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    contadorElement.textContent = totalItems;
+  }
+}
+
 // Función finalizar compra
 function finalizarCompra() {
   if (carrito.length === 0) {
