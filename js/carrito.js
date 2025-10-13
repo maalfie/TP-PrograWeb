@@ -13,16 +13,16 @@ const productos = {
   pulseraMartina: { id: 'pulseraMartina', nombre: 'Set Pulseras Martina', precio: 34600, imagen: './images/Catalogo/pulseraset.jpg' }
 };
 
-let carrito = JSON.parse(sessionStorage.getItem('carritoLuzia') || '[]');
+let carrito = JSON.parse(localStorage .getItem('carritoLuzia') || '[]');
 
 // Función guardar el carrito
 function guardarCarrito() {
-  sessionStorage.setItem('carritoLuzia', JSON.stringify(carrito));
+  localStorage .setItem('carritoLuzia', JSON.stringify(carrito));
 }
 
 // Función cargar carrito
 function cargarCarrito() {
-  carrito = JSON.parse(sessionStorage.getItem('carritoLuzia') || '[]');
+  carrito = JSON.parse(localStorage .getItem('carritoLuzia') || '[]');
 }
 
 // Toast notification
@@ -40,7 +40,6 @@ function mostrarToast(mensaje) {
   }, 3000);
 }
 
-// Función agregar producto (CREATE)
 function agregarAlCarrito(idProducto) {
   const producto = productos[idProducto];
   const itemExistente = carrito.find(item => item.id === idProducto);
