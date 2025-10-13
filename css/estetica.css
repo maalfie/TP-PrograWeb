@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Georgia, serif;
     color: #4a4a4a;
     background-color: #faf8f5;
 }
 
+/* Header */
 header {
     background-color: #fff;
     padding: 1.5rem 2rem;
@@ -43,16 +48,17 @@ nav ul li a {
     text-decoration: none;
     color: #6b6b6b;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #c9a961;
 }
 
-
+/* Hero */
 .hero {
     text-align: center;
-    padding: 12rem 2rem;
+    padding: 10rem 2rem;
     background-image: url('../images/fondoBLUROK.jpg');
     background-size: cover;
     background-position: center;
@@ -80,14 +86,14 @@ nav ul li a:hover {
     font-size: 1.3rem;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.4s ease;
+    transition: background-color 0.3s ease;
 }
 
 .hero a:hover {
     background-color: #b8941f;
 }
 
-
+/* Colecciones */
 .colecciones {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -107,7 +113,7 @@ nav ul li a:hover {
     gap: 2rem;
 }
 
-.grid-colecciones>div {
+.grid-colecciones > div {
     text-align: center;
     background-color: #fff;
     padding: 1.5rem;
@@ -134,6 +140,84 @@ nav ul li a:hover {
     font-size: 1.05rem;
 }
 
+/* Catalogo */
+.catalogo {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.catalogo h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #3d3d3d;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.producto {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #c9a961;
+}
+
+.producto p {
+    color: #8a8a8a;
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #b8941f;
+    margin-bottom: 1.2rem;
+}
+
+.producto input[type="button"] {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background-color: #c9a961;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto input[type="button"]:hover {
+    background-color: #b8941f;
+}
+
+/* Conocenos */
 .conocenos-seccion {
     padding: 4rem 1.2rem;
     background-color: #fff;
@@ -174,7 +258,165 @@ nav ul li a:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Carrito */
+.seccion-carrito {
+    min-height: 60vh;
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+.seccion-carrito h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.carrito-vacio {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+}
+
+.carrito-items {
+    margin: 2rem auto;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.carrito-item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carrito-item-info {
+    flex: 1;
+}
+
+.carrito-item-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.carrito-item-precio {
+    margin: 0;
+    color: #666;
+}
+
+.carrito-item-controles {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-cantidad {
+    background: #c9a961;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cantidad:hover {
+    background: #b8941f;
+}
+
+.cantidad {
+    font-size: 1rem;
+    min-width: 25px;
+    text-align: center;
+}
+
+.carrito-item-subtotal {
+    min-width: 100px;
+    text-align: right;
+}
+
+.carrito-item-subtotal p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.btn-eliminar {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-eliminar:hover {
+    background: #c0392b;
+}
+
+.carrito-total {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-top: 2px solid #333;
+    text-align: right;
+}
+
+.carrito-total h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-finalizar {
+    background: #b8941f;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-finalizar:hover {
+    background: #a37f1a;
+}
+
+/* Toast */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #333;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+}
+
+.toast-notification.mostrar {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Footer */
 footer {
     background-color: #3d3d3d;
     color: #d4d4d4;
@@ -192,81 +434,46 @@ footer {
     color: #b8b8b8;
 }
 
-
+/* Responsive */
 @media (max-width: 1024px) {
-    .hero h2 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.3rem;
-    }
+    .hero h2 { font-size: 2.5rem; }
+    .hero p { font-size: 1.3rem; }
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .logo h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero {
-        padding: 5rem 1.5rem;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .hero a {
-        font-size: 1.1rem;
-        padding: 0.8rem 2rem;
-    }
-
-    .conocenos {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .conocenos p {
-        font-size: 1.1rem;
-    }
+    nav { flex-direction: column; gap: 1rem; }
+    .logo h1 { font-size: 2.5rem; }
+    
+    .hero { padding: 5rem 1.5rem; }
+    .hero h2 { font-size: 2rem; }
+    .hero p { font-size: 1.2rem; }
+    .hero a { font-size: 1.1rem; padding: 0.8rem 2rem; }
+    
+    .grid-productos { grid-template-columns: repeat(2, 1fr); }
+    .producto img { height: 200px; }
+    
+    .carrito-item { flex-wrap: wrap; gap: 1rem; }
+    .carrito-item-img { width: 80px; height: 80px; }
+    .carrito-item-controles,
+    .carrito-item-subtotal,
+    .carrito-total { width: 100%; text-align: center; }
+    
+    .conocenos { flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 480px) {
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .hero a {
-        font-size: 1rem;
-        padding: 0.7rem 1.8rem;
-    }
-
+    .hero h2 { font-size: 1.8rem; }
+    .hero p { font-size: 1.1rem; }
+    .hero a { font-size: 1rem; padding: 0.7rem 1.8rem; }
+    
+    .grid-productos { grid-template-columns: 1fr; }
+    .producto img { height: 180px; }
+    .producto h3 { font-size: 1.2rem; }
+    .producto p { font-size: 0.95rem; }
+    .precio { font-size: 1.05rem; }
+    .producto input[type="button"] { font-size: 0.9rem; padding: 0.6rem 1.5rem; }
+    
     .colecciones h2,
-    .conocenos-seccion h2 {
-        font-size: 2rem;
-    }
-
-    .colecciones p,
-    .conocenos p {
-        font-size: 1rem;
-    }
-}
-
-
-html {
-    scroll-behavior: smooth;
+    .conocenos-seccion h2,
+    .catalogo h2 { font-size: 2rem; }
 }

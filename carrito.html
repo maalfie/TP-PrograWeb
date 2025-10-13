@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito Luzia Joyas</title>
+    <title>Carrito - Luzia Joyas</title>
+    <link rel="stylesheet" href="css/estetica.css">
+    <script src="js/carrito.js"></script>
 </head>
-
 <body>
     <header>
         <nav>
@@ -15,12 +15,20 @@
             </div>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="carrito.html" class="activo">Carrito</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section class="seccion-carrito">
+            <h2>Mi Carrito</h2>
+            <div id="listaCarrito"></div>
+            <div id="total"></div>
+        </section>
+    </main>
 
     <footer id="contacto">
         <div class="footer-seccion">
@@ -30,6 +38,6 @@
             <p>Instagram: @luziajoyas</p>
         </div>
     </footer>
-</body>
 
+</body>
 </html>
