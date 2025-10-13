@@ -13,16 +13,14 @@ const productos = {
   pulseraMartina: { id: 'pulseraMartina', nombre: 'Set Pulseras Martina', precio: 34600, imagen: './images/Catalogo/pulseraset.jpg' }
 };
 
-let carrito = JSON.parse(localStorage.getItem('carritoLuzia') || '[]');
+let carrito = [];
 
 // Función guardar el carrito
 function guardarCarrito() {
-  localStorage.setItem('carritoLuzia', JSON.stringify(carrito));
 }
 
 // Función cargar carrito
 function cargarCarrito() {
-  carrito = JSON.parse(localStorage.getItem('carritoLuzia') || '[]');
 }
 
 // Toast notification
@@ -147,11 +145,6 @@ function eliminarDelCarrito(idProducto) {
   carrito = carrito.filter(item => item.id !== idProducto);
   actualizarEstadoCarrito();
   mostrarToast('✓ Producto eliminado del carrito');
-}
-
-// Función actualizar contador
-function actualizarContadorCarrito() {
-  // Aquí puedes actualizar un contador si lo tienes en el header
 }
 
 // Función finalizar compra
