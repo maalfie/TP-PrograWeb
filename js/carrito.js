@@ -148,11 +148,6 @@ function eliminarDelCarrito(idProducto) {
   mostrarToast('✓ Producto eliminado del carrito');
 }
 
-// Función actualizar contador
-function actualizarContadorCarrito() {
-  // Aquí puedes actualizar un contador si lo tienes en el header
-}
-
 // Función finalizar compra
 function finalizarCompra() {
   if (carrito.length === 0) {
