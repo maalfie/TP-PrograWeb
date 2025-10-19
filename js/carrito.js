@@ -32,7 +32,8 @@ function mostrarToast(mensaje) {
   toast.textContent = mensaje;
 
   document.body.appendChild(toast);
-  setTimeout(() => toast.classList.add('mostrar'), 10);
+  toast.offsetHeight;
+  toast.classList.add('mostrar');
 
   setTimeout(() => {
     toast.classList.remove('mostrar');
@@ -58,7 +59,6 @@ function agregarAlCarrito(idProducto) {
   }
 
   guardarCarrito();
-  actualizarContadorCarrito();
   mostrarToast(`✓ ${producto.nombre} agregado al carrito`);
 }
 
@@ -117,7 +117,6 @@ function mostrarCarrito() {
 function actualizarEstadoCarrito() {
   guardarCarrito();
   mostrarCarrito();
-  actualizarContadorCarrito();
 }
 
 // Funciones modificar cantidad (Update)
