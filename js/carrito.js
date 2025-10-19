@@ -13,16 +13,16 @@ const productos = {
   pulseraMartina: { id: 'pulseraMartina', nombre: 'Set Pulseras Martina', precio: 34600, imagen: './images/Catalogo/pulseraset.jpg' }
 };
 
-let carrito = JSON.parse(localStorage .getItem('carritoLuzia') || '[]');
+let carrito = JSON.parse(localStorage.getItem('carritoLuzia') || '[]');
 
 // Función guardar el carrito
 function guardarCarrito() {
-  localStorage .setItem('carritoLuzia', JSON.stringify(carrito));
+  localStorage.setItem('carritoLuzia', JSON.stringify(carrito));
 }
 
 // Función cargar carrito
 function cargarCarrito() {
-  carrito = JSON.parse(localStorage .getItem('carritoLuzia') || '[]');
+  carrito = JSON.parse(localStorage.getItem('carritoLuzia') || '[]');
 }
 
 // Toast notification
@@ -30,10 +30,10 @@ function mostrarToast(mensaje) {
   const toast = document.createElement('div');
   toast.className = 'toast-notification';
   toast.textContent = mensaje;
-  
+
   document.body.appendChild(toast);
   setTimeout(() => toast.classList.add('mostrar'), 10);
-  
+
   setTimeout(() => {
     toast.classList.remove('mostrar');
     setTimeout(() => toast.remove(), 300);
@@ -154,16 +154,16 @@ function finalizarCompra() {
     alert('Tu carrito está vacío');
     return;
   }
-  
+
   const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
   alert(`¡Gracias por tu compra!\nTotal: $${total.toLocaleString('es-AR')}.`);
-  
+
   carrito = [];
   actualizarEstadoCarrito();
 }
 
 // Eventos botones e inicialización
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   cargarCarrito();
 
   if (document.getElementById('botonArosZaira')) {

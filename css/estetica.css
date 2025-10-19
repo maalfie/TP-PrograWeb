@@ -113,7 +113,7 @@ nav ul li a:hover {
     gap: 2rem;
 }
 
-.grid-colecciones > div {
+.grid-colecciones>div {
     text-align: center;
     background-color: #fff;
     padding: 1.5rem;
@@ -436,44 +436,115 @@ footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .hero h2 { font-size: 2.5rem; }
-    .hero p { font-size: 1.3rem; }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 768px) {
-    nav { flex-direction: column; gap: 1rem; }
-    .logo h1 { font-size: 2.5rem; }
-    
-    .hero { padding: 5rem 1.5rem; }
-    .hero h2 { font-size: 2rem; }
-    .hero p { font-size: 1.2rem; }
-    .hero a { font-size: 1.1rem; padding: 0.8rem 2rem; }
-    
-    .grid-productos { grid-template-columns: repeat(2, 1fr); }
-    .producto img { height: 200px; }
-    
-    .carrito-item { flex-wrap: wrap; gap: 1rem; }
-    .carrito-item-img { width: 80px; height: 80px; }
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero {
+        padding: 5rem 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero a {
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .grid-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .producto img {
+        height: 200px;
+    }
+
+    .carrito-item {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .carrito-item-img {
+        width: 80px;
+        height: 80px;
+    }
+
     .carrito-item-controles,
     .carrito-item-subtotal,
-    .carrito-total { width: 100%; text-align: center; }
-    
-    .conocenos { flex-direction: column; text-align: center; }
+    .carrito-total {
+        width: 100%;
+        text-align: center;
+    }
+
+    .conocenos {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
-    .hero h2 { font-size: 1.8rem; }
-    .hero p { font-size: 1.1rem; }
-    .hero a { font-size: 1rem; padding: 0.7rem 1.8rem; }
-    
-    .grid-productos { grid-template-columns: 1fr; }
-    .producto img { height: 180px; }
-    .producto h3 { font-size: 1.2rem; }
-    .producto p { font-size: 0.95rem; }
-    .precio { font-size: 1.05rem; }
-    .producto input[type="button"] { font-size: 0.9rem; padding: 0.6rem 1.5rem; }
-    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero a {
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto img {
+        height: 180px;
+    }
+
+    .producto h3 {
+        font-size: 1.2rem;
+    }
+
+    .producto p {
+        font-size: 0.95rem;
+    }
+
+    .precio {
+        font-size: 1.05rem;
+    }
+
+    .producto input[type="button"] {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+    }
+
     .colecciones h2,
     .conocenos-seccion h2,
-    .catalogo h2 { font-size: 2rem; }
+    .catalogo h2 {
+        font-size: 2rem;
+    }
 }
